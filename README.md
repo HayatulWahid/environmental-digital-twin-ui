@@ -1,16 +1,19 @@
-# React + Vite
+Environmental Digital Twin: Edge-to-Cloud Telemetry UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+​Overview
 
-Currently, two official plugins are available:
+​This repository contains the real-time frontend visualization dashboard for an Environmental Digital Twin. It bridges physical mechatronic edge nodes with asynchronous cloud/local routing, rendering physical space into actionable Cartesian data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+​This UI consumes a continuous telemetry stream (Temperature & Humidity) from an asynchronous Python/FastAPI backend, which is actively fed by physical ESP32 edge microcontrollers and DHT11 sensors deployed in the physical environment.
 
-## React Compiler
+​⚙️ System Architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+​Hardware Edge: ESP32-WROOM-32 + DHT11 Sensor Array
+​Backend Routing: Python / FastAPI (REST/WebSockets)
+​Frontend Dashboard (This Repo): React / Vite / Tailwind CSS
 
-## Expanding the ESLint configuration
+​🚀 Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+​Real-Time Data Ingestion: Asynchronous polling/WebSocket connections to the FastAPI telemetry router.
+​Dynamic State Rendering: Instantaneous UI updates reflecting physical environmental shifts.
+​Resource-Optimized Build: Configured via Vite for rapid Hot Module Replacement (HMR) and lean production bundling.
